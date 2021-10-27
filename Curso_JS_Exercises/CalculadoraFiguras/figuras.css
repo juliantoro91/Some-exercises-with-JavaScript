@@ -1,0 +1,117 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --text-input-field: #F7F7F7;
+    --black: #000000;
+    --hospital-green: #ACD9B2;
+    --dark: #232830;
+    --principal-font: Quicksand, Verdana, Geneva, Tahoma, sans-serif;
+    --secondary-font: Roboto, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --header-height: 120px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--principal-font);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: calc(100vh - 100px);
+    margin: 50px auto;
+    gap: 32px;
+    min-width: 350px;
+}
+
+.page-header {
+    width: 100%;
+    height: var(--header-height);
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--dark);
+    font-size: calc(2 * var(--lg));
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    /*justify-items: center;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.principal-calculator {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.principal-calculator h2 {
+    color: var(--hospital-green);
+    font-size: var(--md);
+}
+
+.principal-calculator form {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 8px;
+}
+
+.principal-calculator form label {
+    color: var(--dark);
+    font-size: var(--sm);
+}
+
+.principal-calculator form input {
+    background-color: var(--text-input-field);
+    width: 100%;
+    height: 24px;
+    font-size: var(--sm);
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.principal-calculator div {
+    width: 100%;
+    display: flex;
+    gap: 4%;
+}
+
+.button-one {
+    width: 48%;
+    background-color: var(--hospital-green);
+    color: var(--white);
+    font-size: var(--sm);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    cursor: pointer;
+}
