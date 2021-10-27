@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estadistica.css">
+    <title>Estadísticas</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="page-header">
+      <h1>
+        Estadísticas
+      </h1>
+      <p>Este es el tercer taller del curso práctico de JavaScript</p>
+    </header>
+
+    <main class="main-container">
+      
+      <aricle class="principal-calculator">
+        <h2>Calcula las principales medidas de tendencia central</h2>
+        <form>
+          <label for="InputData">
+            Ingresa los datos que vas a analizar, separados solo por una coma ','
+          </label>
+          <input id="InputData" type="text" placeholder="1,2,3,4,5"/>
+          <div>
+            <button type="button" onclick="CalcularEstadisticas()" class="button-one">
+              Calcular estadísticas
+            </button>
+          </div>
+        </form>
+        <p id="ResultStats"></p>
+      </aricle>
+
+    </main>
+  </div>
+  <script src="./estadistica.js"></script>
+</body>
+
+</html>

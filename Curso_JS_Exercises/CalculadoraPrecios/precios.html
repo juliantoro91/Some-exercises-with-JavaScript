@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./precios.css">
+    <title>Precios y descuentos</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="page-header">
+      <h1>
+        Precios y descuentos
+      </h1>
+      <p>Este es el segundo taller del curso práctico de JavaScript</p>
+    </header>
+
+    <main class="main-container">
+      
+      <aricle class="principal-calculator">
+        <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+        <form>
+          <label for="InputPrice">
+            Ingresa el precio de tu producto
+          </label>
+          <input id="InputPrice" type="number" />
+          <label for="InputDiscount">
+            Ingresa el código de descuento
+          </label>
+          <input id="InputDiscount" type="text" />
+          <div>
+            <button type="button" onclick="calcularPrecioConDescuento()" class="button-one">
+              Calcular el precio con descuento
+            </button>
+          </div>
+        </form>
+        <p id="ResultPrice"></p>
+      </aricle>
+
+    </main>
+  </div>
+  <script src="./precios.js"></script>
+</body>
+
+</html>

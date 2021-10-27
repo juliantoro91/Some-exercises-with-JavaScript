@@ -61,7 +61,7 @@ body {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .principal-calculator {
@@ -106,7 +106,7 @@ body {
 }
 
 .button-one {
-    width: 48%;
+    width: 100%;
     background-color: var(--hospital-green);
     color: var(--white);
     font-size: var(--sm);
@@ -115,4 +115,11 @@ body {
     border-radius: 8px;
     height: 40px;
     cursor: pointer;
+}
+
+.principal-calculator > p {
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    font-weight: bold;
+    text-align: center;
 }
