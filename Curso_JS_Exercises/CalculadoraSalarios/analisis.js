@@ -21,8 +21,6 @@ function mediana(lista) {
 
     (esPar) ? index = lista.length / 2 : index = (lista.length - 1) / 2;
 
-    lista.sort((a, b) => a - b);
-
     let mediana;
     (!esPar) ? mediana = lista[index] : mediana = promedio([lista[index], lista[index - 1]]);
 
@@ -52,21 +50,22 @@ function moda(lista) {
     return moda;
 }
 
-function mode(lista){
-    return lista.sort((a,b) =>
-          lista.filter(v => v===a).length - lista.filter(v => v===b).length
-    ).pop();
-}
 
 // Calculadora
-function CalcularEstadisticas() {
-    const input = document.getElementById("InputData").value;
+function CalcularEstadisticasSalarios() {
 
-    const datos = input.split(",").map((dato) => Number(dato));
+    const datos = personas.getSalarios().sort((a, b) => a - b);
 
-    let message = "El Promedio es " + promedio(datos);
-    message += "<br />" + "La Mediana es " + mediana(datos);
-    message += "<br />" + "La Moda es " + moda(datos);
+    let message = "El Promedio de salarios es US$ " + promedio(datos);
+    message += "<br />" + "La Mediana de salarios es US$ " + mediana(datos);
 
+    const topDiez = Math.floor(datos.length / 10);
+    const datos10 = datos.splice(
+        datos.length - topDiez,
+        topDiez);
+
+    message += "<br />" + "La Mediana del Top10 es US$ " + mediana(datos10);
+
+    document.getElementById("InputData").innerHTML = personas.imprimir();
     document.getElementById("ResultStats").innerHTML = message;
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./salarios.css">
+    <title>Salarios</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="page-header">
+      <h1>
+        Estadísticas salariales
+      </h1>
+      <p>Este es el cuarto taller del curso práctico de JavaScript</p>
+    </header>
+
+    <main class="main-container">
+      
+      <aricle class="principal-calculator">
+        <h2>Observemos algunas estadísticas de los salarios de desarrolladores en Colombia</h2>
+        <div>
+          <button type="button" onclick="CalcularEstadisticasSalarios()" class="button-one">
+            Desplegar estadísticas
+          </button>
+        </div>
+        <div class="input-data">
+            <p id="InputData"></p>
+        </div>
+        <p id="ResultStats"></p>
+      </aricle>
+
+    </main>
+  </div>
+  <script src="./salarios.js"></script>
+  <script src="./analisis.js"></script>
+</body>
+
+</html>
